@@ -9,4 +9,8 @@ The notebook ```creating_playing_cards_dataset.ipynb``` is a guide through the c
  - Instead of having to hardcode the card names, they are extracted from the directory names containing the card images
 
 ## Card Generation Workflow
-1. Generate the Training and Validation datasets with the ```creating_playing_cards_dataset.ipynb```notebook.
+1. Generate the Training and Validation datasets with the ```creating_playing_cards_dataset.ipynb``` notebook.
+1. Train the yolov5 Model 
+    ```
+    $ python train.py --img 640 --epochs 3 --data data/scenes/train --weights yolov5s.pt
+    ```
