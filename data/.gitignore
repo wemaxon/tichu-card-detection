@@ -3,7 +3,8 @@ cards/
 cards.pck
 cards.names
 scenes/
-val.txt
 video/
 card_imgs_rendered/
 card_scans/
+val.txt
+train.txt

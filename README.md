@@ -6,9 +6,7 @@ This dataset can be used for the training of a neural net intended to detect/loc
 ## Changes from the original 
 The notebook ```creating_playing_cards_dataset.ipynb``` is a guide through the creation of a dataset of playing cards.
  - The script was modified to extract card images from pictures of cards instead of from videos.
- - Instead of having to hardcode the card names, they are extrated from the directory names containing the card images
+ - Instead of having to hardcode the card names, they are extracted from the directory names containing the card images
 
 ## Card Generation Workflow
 1. Generate the Training and Validation datasets with the ```creating_playing_cards_dataset.ipynb```notebook.
-
-<!-- <img src="img/ex_generated_image.png" alt="Example of generated image "  title="Example of generated image " /> -->
