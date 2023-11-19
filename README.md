@@ -10,7 +10,9 @@ The notebook ```creating_playing_cards_dataset.ipynb``` is a guide through the c
 
 ## Card Generation Workflow
 1. Generate the Training and Validation datasets with the ```creating_playing_cards_dataset.ipynb``` notebook.
-1. Train the yolov5 Model 
+    1. 
+1. Train the yolov5 Model
     ```
-    $ python train.py --img 640 --epochs 3 --data data/scenes/train --weights yolov5s.pt
+    $ cd yolov5
+    $ python train.py --img 640 --epochs 3 --data ../data/scenes/dataset.yaml --weights yolov5s.pt
     ```
