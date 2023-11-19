@@ -1,8 +1,9 @@
 backgrounds.pck
 cards/
 cards.pck
+cards.names
 scenes/
 val.txt
 video/
-MovieRenders/
-cards_scan_seperated/
+card_imgs_rendered/
+card_scans/
