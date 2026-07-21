@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 import shutil
 from pathlib import Path
 
@@ -23,6 +24,18 @@ def convert_image(source: Path, destination: Path, single_channel: bool) -> None
 def copy_label(source: Path, destination: Path) -> None:
     destination.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(source, destination)
+
+
+def render_progress(current: int, total: int, label: str) -> None:
+    if total <= 0:
+        return
+
+    width = 30
+    filled = int(width * current / total)
+    bar = "#" * filled + "-" * (width - filled)
+    message = f"\r{label}: [{bar}] {current}/{total}"
+    end = "\n" if current == total else ""
+    print(message, end=end, file=sys.stdout, flush=True)
 
 
 def write_dataset_yaml(source_yaml: Path, destination_yaml: Path, destination_root: Path) -> None:
@@ -54,15 +67,17 @@ def build_dataset(source_root: Path, destination_root: Path, single_channel: boo
         image_stems = {path.stem for path in image_paths}
         label_paths = [path for path in label_paths if path.stem in image_stems]
 
-    for path in image_paths:
+    for index, path in enumerate(image_paths, start=1):
         relative_path = path.relative_to(source_root)
         destination_path = destination_root / relative_path
         convert_image(path, destination_path, single_channel=single_channel)
+        render_progress(index, len(image_paths), "Converting images")
 
-    for path in label_paths:
+    for index, path in enumerate(label_paths, start=1):
         relative_path = path.relative_to(source_root)
         destination_path = destination_root / relative_path
         copy_label(path, destination_path)
+        render_progress(index, len(label_paths), "Copying labels")
 
     return len(image_paths), len(label_paths)
 
@@ -83,8 +98,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--destination",
         type=Path,
-        default=Path("data/scans_minochrome"),
-        help="Destination dataset root. Default: data/scans_minochrome",
+        default=Path("data/scenes_monochrome"),
+        help="Destination dataset root. Default: data/scenes_monochrome",
     )
     parser.add_argument(
         "--single-channel",
