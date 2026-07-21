@@ -1,7 +1,11 @@
-.venv/
+# Data
 dtd-r1.0.1.tar.gz
-.ipynb_checkpoints/
 dtd/
 data/*
 test/
 *.pt
+
+# Python
+.venv/
+.ipynb_checkpoints/
+__pycache__/
