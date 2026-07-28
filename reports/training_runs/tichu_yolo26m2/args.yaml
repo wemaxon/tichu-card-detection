@@ -1,7 +1,7 @@
 task: detect
 mode: train
-model: yolo26m.pt
-data: data/scenes_monochrome/scenes.yaml
+model: models/trained/tichu_yolo26m/weights/best.pt
+data: data/synthetic/color/scenes.yaml
 epochs: 200
 time: null
 patience: 5
@@ -12,8 +12,8 @@ save_period: -1
 cache: false
 device: '0'
 workers: 8
-project: model/
-name: tichu_yolo26m_monochrome
+project: artifacts/training_runs
+name: tichu_yolo26m2
 exist_ok: false
 pretrained: true
 optimizer: auto
@@ -106,4 +106,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: C:\Users\maxan\Hobby\Inforelektrikbau\Tichu-Bot\software\tichu-card-detection\runs\detect\model\tichu_yolo26m_monochrome
+save_dir: artifacts/training_runs/tichu_yolo26m2

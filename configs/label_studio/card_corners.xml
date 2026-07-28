@@ -1,0 +1,70 @@
+<View>
+  <Header value="Draw a tight box around the complete rank-and-suit corner unit."/>
+  <Image name="image" value="$image" zoom="true"/>
+
+  <RectangleLabels name="identity" toName="image">
+    <Label value="black10" background="#4B5563"/>
+    <Label value="black2" background="#4B5563"/>
+    <Label value="black3" background="#4B5563"/>
+    <Label value="black4" background="#4B5563"/>
+    <Label value="black5" background="#4B5563"/>
+    <Label value="black6" background="#4B5563"/>
+    <Label value="black7" background="#4B5563"/>
+    <Label value="black8" background="#4B5563"/>
+    <Label value="black9" background="#4B5563"/>
+    <Label value="blacka" background="#4B5563"/>
+    <Label value="blackj" background="#4B5563"/>
+    <Label value="blackk" background="#4B5563"/>
+    <Label value="blackq" background="#4B5563"/>
+    <Label value="blue10" background="#2563EB"/>
+    <Label value="blue2" background="#2563EB"/>
+    <Label value="blue3" background="#2563EB"/>
+    <Label value="blue4" background="#2563EB"/>
+    <Label value="blue5" background="#2563EB"/>
+    <Label value="blue6" background="#2563EB"/>
+    <Label value="blue7" background="#2563EB"/>
+    <Label value="blue8" background="#2563EB"/>
+    <Label value="blue9" background="#2563EB"/>
+    <Label value="bluea" background="#2563EB"/>
+    <Label value="bluej" background="#2563EB"/>
+    <Label value="bluek" background="#2563EB"/>
+    <Label value="blueq" background="#2563EB"/>
+    <Label value="dog" background="#F59E0B"/>
+    <Label value="dragon" background="#7C3AED"/>
+    <Label value="green10" background="#16A34A"/>
+    <Label value="green2" background="#16A34A"/>
+    <Label value="green3" background="#16A34A"/>
+    <Label value="green4" background="#16A34A"/>
+    <Label value="green5" background="#16A34A"/>
+    <Label value="green6" background="#16A34A"/>
+    <Label value="green7" background="#16A34A"/>
+    <Label value="green8" background="#16A34A"/>
+    <Label value="green9" background="#16A34A"/>
+    <Label value="greena" background="#16A34A"/>
+    <Label value="greenj" background="#16A34A"/>
+    <Label value="greenk" background="#16A34A"/>
+    <Label value="greenq" background="#16A34A"/>
+    <Label value="mahjong" background="#0891B2"/>
+    <Label value="phoenix" background="#DB2777"/>
+    <Label value="red10" background="#DC2626"/>
+    <Label value="red2" background="#DC2626"/>
+    <Label value="red3" background="#DC2626"/>
+    <Label value="red4" background="#DC2626"/>
+    <Label value="red5" background="#DC2626"/>
+    <Label value="red6" background="#DC2626"/>
+    <Label value="red7" background="#DC2626"/>
+    <Label value="red8" background="#DC2626"/>
+    <Label value="red9" background="#DC2626"/>
+    <Label value="reda" background="#DC2626"/>
+    <Label value="redj" background="#DC2626"/>
+    <Label value="redk" background="#DC2626"/>
+    <Label value="redq" background="#DC2626"/>
+  </RectangleLabels>
+
+  <Choices name="readability" toName="image" perRegion="true" required="true">
+    <Choice value="readable"/>
+    <Choice value="partial"/>
+    <Choice value="blurred"/>
+    <Choice value="ignore"/>
+  </Choices>
+</View>

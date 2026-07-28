@@ -92,14 +92,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--source",
         type=Path,
-        default=Path("data/scenes"),
-        help="Source dataset root. Default: data/scenes",
+        default=Path("data/synthetic/color"),
+        help="Source dataset root. Default: data/synthetic/color",
     )
     parser.add_argument(
         "--destination",
         type=Path,
-        default=Path("data/scenes_monochrome"),
-        help="Destination dataset root. Default: data/scenes_monochrome",
+        default=Path("data/synthetic/monochrome"),
+        help="Destination dataset root. Default: data/synthetic/monochrome",
     )
     parser.add_argument(
         "--single-channel",

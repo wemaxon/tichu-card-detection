@@ -1,11 +1,52 @@
-# Data
-dtd-r1.0.1.tar.gz
-dtd/
-data/*
-test/
-*.pt
-
 # Python
-.venv/
-.ipynb_checkpoints/
+/.venv/
 __pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+
+# Local services and generated run artifacts
+/.label-studio/
+/artifacts/
+/mlruns/
+/mlartifacts/
+/mlflow.db
+
+# Model weights are stored outside Git (DVC or MLflow when promoted).
+*.pt
+*.onnx
+*.engine
+*.torchscript
+
+# Large data. DVC pointer files and its local ignore files remain trackable.
+/data/*
+!/data/README.md
+!/data/*.dvc
+!/data/raw/
+!/data/annotations/
+!/data/processed/
+
+/data/raw/*
+!/data/raw/*.dvc
+!/data/raw/.gitignore
+
+/data/annotations/*
+!/data/annotations/*.dvc
+!/data/annotations/.gitignore
+
+/data/processed/*
+!/data/processed/*.dvc
+!/data/processed/.gitignore
+
+# Local archives and retired root paths
+*.tar
+*.tar.gz
+/test/
+/runs/
+/dtd/
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example

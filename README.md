@@ -1,6 +1,29 @@
-# tichu-card-detection
-Generating a dataset of Tichu playing cards to train a neural net. Taking [geaxgx's work](https://github.com/geaxgx/playing-card-detection) and applying it to the Tichu card playing game.
+# Tichu Card Detection
+
+Computer-vision pipeline for detecting and classifying the 56 cards in a Tichu
+deck.
 
 
-## Generating the Dataset
-Extract cards from videos and generate the dataset using the [Jupyter Notebook](creating_playing_cards_dataset.ipynb)
+## Repository Layout
+
+```text
+configs/
+  classes.names            existing ordered class names
+  classes.yaml             canonical class IDs
+  label_studio/            card-corner labeling configuration
+
+data/
+  raw/
+    card_scans/             original scan videos
+    card_videos/            original recordings
+  external/dtd/             third-party texture images
+  interim/                  extracted media, card crops, and caches
+  synthetic/                color, mixed, and monochrome scene datasets
+
+scripts/                    existing conversion and generation scripts
+notebooks/                  existing exploration and training notebooks
+models/pretrained/          generic YOLO initialization weights
+models/trained/             weights from the current training runs
+reports/training_runs/      metrics and plots from the current training runs
+artifacts/test/             existing generated test outputs
+```

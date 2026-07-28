@@ -46,7 +46,12 @@ def convert_annotation(xml_fn, labels_dir):
 
 if len(sys.argv) != 4:
     print(f"Usage: {sys.argv[0]} images_dir labels_dir classes.names")
-    print(f"Ex: {sys.argv[0]} data/cards/train labels data/cards.names")
+    print(
+        f"Ex: {sys.argv[0]} "
+        "data/synthetic/color/train/labels "
+        "data/synthetic/color/train/labels "
+        "configs/classes.names"
+    )
     print("From XML files in images_dir, convert them to txt files with annotation information.")
     sys.exit(1)
 
