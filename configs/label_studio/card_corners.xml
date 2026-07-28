@@ -1,70 +1,68 @@
 <View>
-  <Header value="Draw a tight box around the complete rank-and-suit corner unit."/>
-  <Image name="image" value="$image" zoom="true"/>
-
+  <Header value="Draw a tight box around the complete rank-and-suit corner unit." />
+  <Image name="image" value="$image" zoom="true" />
   <RectangleLabels name="identity" toName="image">
-    <Label value="black10" background="#4B5563"/>
-    <Label value="black2" background="#4B5563"/>
-    <Label value="black3" background="#4B5563"/>
-    <Label value="black4" background="#4B5563"/>
-    <Label value="black5" background="#4B5563"/>
-    <Label value="black6" background="#4B5563"/>
-    <Label value="black7" background="#4B5563"/>
-    <Label value="black8" background="#4B5563"/>
-    <Label value="black9" background="#4B5563"/>
-    <Label value="blacka" background="#4B5563"/>
-    <Label value="blackj" background="#4B5563"/>
-    <Label value="blackk" background="#4B5563"/>
-    <Label value="blackq" background="#4B5563"/>
-    <Label value="blue10" background="#2563EB"/>
-    <Label value="blue2" background="#2563EB"/>
-    <Label value="blue3" background="#2563EB"/>
-    <Label value="blue4" background="#2563EB"/>
-    <Label value="blue5" background="#2563EB"/>
-    <Label value="blue6" background="#2563EB"/>
-    <Label value="blue7" background="#2563EB"/>
-    <Label value="blue8" background="#2563EB"/>
-    <Label value="blue9" background="#2563EB"/>
-    <Label value="bluea" background="#2563EB"/>
-    <Label value="bluej" background="#2563EB"/>
-    <Label value="bluek" background="#2563EB"/>
-    <Label value="blueq" background="#2563EB"/>
-    <Label value="dog" background="#F59E0B"/>
-    <Label value="dragon" background="#7C3AED"/>
-    <Label value="green10" background="#16A34A"/>
-    <Label value="green2" background="#16A34A"/>
-    <Label value="green3" background="#16A34A"/>
-    <Label value="green4" background="#16A34A"/>
-    <Label value="green5" background="#16A34A"/>
-    <Label value="green6" background="#16A34A"/>
-    <Label value="green7" background="#16A34A"/>
-    <Label value="green8" background="#16A34A"/>
-    <Label value="green9" background="#16A34A"/>
-    <Label value="greena" background="#16A34A"/>
-    <Label value="greenj" background="#16A34A"/>
-    <Label value="greenk" background="#16A34A"/>
-    <Label value="greenq" background="#16A34A"/>
-    <Label value="mahjong" background="#0891B2"/>
-    <Label value="phoenix" background="#DB2777"/>
-    <Label value="red10" background="#DC2626"/>
-    <Label value="red2" background="#DC2626"/>
-    <Label value="red3" background="#DC2626"/>
-    <Label value="red4" background="#DC2626"/>
-    <Label value="red5" background="#DC2626"/>
-    <Label value="red6" background="#DC2626"/>
-    <Label value="red7" background="#DC2626"/>
-    <Label value="red8" background="#DC2626"/>
-    <Label value="red9" background="#DC2626"/>
-    <Label value="reda" background="#DC2626"/>
-    <Label value="redj" background="#DC2626"/>
-    <Label value="redk" background="#DC2626"/>
-    <Label value="redq" background="#DC2626"/>
+    <Label value="10-sword" background="#4B5563" />
+    <Label value="2-sword" background="#4B5563" />
+    <Label value="3-sword" background="#4B5563" />
+    <Label value="4-sword" background="#4B5563" />
+    <Label value="5-sword" background="#4B5563" />
+    <Label value="6-sword" background="#4B5563" />
+    <Label value="7-sword" background="#4B5563" />
+    <Label value="8-sword" background="#4B5563" />
+    <Label value="9-sword" background="#4B5563" />
+    <Label value="ace-sword" background="#4B5563" />
+    <Label value="jack-sword" background="#4B5563" />
+    <Label value="king-sword" background="#4B5563" />
+    <Label value="queen-sword" background="#4B5563" />
+    <Label value="10-pagoda" background="#2563EB" />
+    <Label value="2-pagoda" background="#2563EB" />
+    <Label value="3-pagoda" background="#2563EB" />
+    <Label value="4-pagoda" background="#2563EB" />
+    <Label value="5-pagoda" background="#2563EB" />
+    <Label value="6-pagoda" background="#2563EB" />
+    <Label value="7-pagoda" background="#2563EB" />
+    <Label value="8-pagoda" background="#2563EB" />
+    <Label value="9-pagoda" background="#2563EB" />
+    <Label value="ace-pagoda" background="#2563EB" />
+    <Label value="jack-pagoda" background="#2563EB" />
+    <Label value="king-pagoda" background="#2563EB" />
+    <Label value="queen-pagoda" background="#2563EB" />
+    <Label value="dog" background="#F59E0B" />
+    <Label value="dragon" background="#7C3AED" />
+    <Label value="10-jade" background="#16A34A" />
+    <Label value="2-jade" background="#16A34A" />
+    <Label value="3-jade" background="#16A34A" />
+    <Label value="4-jade" background="#16A34A" />
+    <Label value="5-jade" background="#16A34A" />
+    <Label value="6-jade" background="#16A34A" />
+    <Label value="7-jade" background="#16A34A" />
+    <Label value="8-jade" background="#16A34A" />
+    <Label value="9-jade" background="#16A34A" />
+    <Label value="ace-jade" background="#16A34A" />
+    <Label value="jack-jade" background="#16A34A" />
+    <Label value="king-jade" background="#16A34A" />
+    <Label value="queen-jade" background="#16A34A" />
+    <Label value="mahjong" background="#1ad4c5" />
+    <Label value="phoenix" background="#f2f700" />
+    <Label value="10-star" background="#DC2626" />
+    <Label value="2-star" background="#DC2626" />
+    <Label value="3-star" background="#DC2626" />
+    <Label value="4-star" background="#DC2626" />
+    <Label value="5-star" background="#DC2626" />
+    <Label value="6-star" background="#DC2626" />
+    <Label value="7-star" background="#DC2626" />
+    <Label value="8-star" background="#DC2626" />
+    <Label value="9-star" background="#DC2626" />
+    <Label value="ace-star" background="#DC2626" />
+    <Label value="jack-star" background="#DC2626" />
+    <Label value="king-star" background="#DC2626" />
+    <Label value="queen-star" background="#DC2626" />
   </RectangleLabels>
-
   <Choices name="readability" toName="image" perRegion="true" required="true">
-    <Choice value="readable"/>
-    <Choice value="partial"/>
-    <Choice value="blurred"/>
-    <Choice value="ignore"/>
+    <Choice value="readable" />
+    <Choice value="partial" />
+    <Choice value="blurred" />
+    <Choice value="ignore" />
   </Choices>
 </View>
