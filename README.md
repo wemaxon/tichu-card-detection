@@ -3,6 +3,10 @@
 Computer-vision pipeline for detecting and classifying the 56 cards in a Tichu
 deck.
 
+![detections](docs/images/detections.gif)
+
+
+- Models are trained on the [Tichu italian Edition ](https://www.uplay.it/it/gioco-da-tavolo-tichu.html)
 
 ## Repository Layout
 
@@ -28,9 +32,11 @@ reports/training_runs/      metrics and plots from the current training runs
 artifacts/test/             existing generated test outputs
 ```
 
+## Generating the training data
+The dataset is generated from either card scans or individual card videos. Card Symbols are extracted, labeled, randomly overlapped and augmented in this [notebook](notebooks\creating_playing_cards_dataset.ipynb).
 
-## Using Label Studio
-Label Studio is used to manually annotate datasets. It is installed in a seperate python virtual environment.
+## Annotation with Label Studio
+Label Studio is used to manually annotate datasets. It is installed in a seperate python virtual environment. Datasets can be preannotated using one of the trained yolo models.
 
 #### Install and launch
 ```powershell
@@ -41,7 +47,7 @@ pip install -U label-studio
 label-studio
 ```
 
-#### Preannotating with a yolo model
+#### Preannotating with a YOLO model
 ```powershell
 $env:LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED = "true"
 $env:LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT = (Resolve-Path "data/raw").Path
@@ -55,10 +61,17 @@ $env:LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED = "true"
 label-studio
 ```
 
-In Label Studio:
+## Benchmarks
+Benchmarks are run from this [Notebook](notebooks/benchmark_models.ipynb).
 
-1. Open Settings → Cloud Storage.
-2. Select Add Source Storage → Local Files.
-3. Use:
 
-Storage title:
+#### Benchmark 1
+Four yolov10m models were trained with the same synthetic dataset and benchmarked on a manually annotated (preanotated by model) [dataset](data/raw/20260728T210000_poco-f3/).
+
+
+|  # | Model           | Precision (B) | Recall (B) | mAP50 (B) | mAP50–95 (B) |  Fitness |
+| -: | --------------- | ------------: | ---------: | --------: | -----------: | -------: |
+|  0 | color           |      0.912686 |   0.850112 |  0.899588 |     0.853612 | 0.853612 |
+|  1 | color_finetuned |      0.923315 |   0.804554 |  0.878335 |     0.823419 | 0.823419 |
+|  2 | mixed           |      0.899029 |   0.869885 |  0.906991 |     0.888634 | 0.888634 |
+|  3 | monochrome      |      0.847741 |   0.724981 |  0.829099 |     0.778361 | 0.778361 |
